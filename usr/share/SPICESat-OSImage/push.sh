@@ -19,6 +19,7 @@ fi
 
 git config --get user.email || osimager --login
 
-(cd ~/SPICESat && git add . && git commit -m "$1" && git push origin main --force && echo "Code successfully pushed to remote") || echo "Commit failed. Read git error message above. If directory does not exist try 'osimager --pull'. It is asking for you to provide git credentials try osimager --login" 
+osimager --pull
+(cd ~/SPICESat && git add . && git commit -m "$*" && git push origin main && echo "Code successfully pushed to remote") || echo "Commit failed. Read git error message above. If directory does not exist try 'osimager --pull'. It is asking for you to provide git credentials try osimager --login" 
 cd $dir
 

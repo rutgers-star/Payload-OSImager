@@ -11,7 +11,6 @@
 
 dir=$PWD
 cd ~
-cd SPICESat || (git clone https://github.com/rutgers-star/PayloadSoftware.git && sudo mv PayloadSoftware SPICESat && cd SPICESat)
-(git pull && echo "Python modules up to date") || echo "Git not installed. Run osimager --u"
+cd SPICESat || (git clone https://github.com/rutgers-star/PayloadSoftware.git; sudo mv PayloadSoftware SPICESat; cd SPICESat; echo "done"; exit 1;) || exit; 
+git pull && echo "Python modules up to date in ~/SPICESat" || echo "Git not installed. Run osimager --u"
 cd $dir
-echo "Python modules up to date in ~/SPICESat"

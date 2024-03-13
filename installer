@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Used to install this repository
+
+#Creation Date: 3/13/2024
+#Last Updated: 3/13/2024
+#Author: Simon Kowerski
+
+#Version: 1.0
+
+wget deb file
+sudo apt install $PWD/SPICESat-OSImage.deb
+rm $PWD/SPICESat-OSImage.deb
+rm $PWD/installer

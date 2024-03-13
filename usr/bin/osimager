@@ -52,6 +52,7 @@ case $1 in
   --h*) echo "$usage" || exit 1; exit;;
   --i*)	./imageos.sh || exit 1; exit;;
   --u*) ./installall.sh || exit 1; exit;;
+  --b*) ./cambuild.sh || exit 1; exit;;
 
   --add*) ./add.sh $2 || exit 1; exit;;
   --remove*) ./remove.sh $2 || exit 1; exit;;
