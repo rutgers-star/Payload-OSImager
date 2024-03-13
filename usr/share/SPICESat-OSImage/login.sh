@@ -11,5 +11,11 @@
 echo "Enter the credentials for your GitHub account below. If using an AuthToken I recommend setting it to never expire."
 echo "Make sure to set the preferred authentication method to HTTPS"
 
-gh auth login
+read -p "Enter your GitHub email address (must have access to S.T.A.R. organization): " email
+read -p "Enter your GitHub username: " username
 
+gh auth login
+git config --global user.email $email
+git config --global user.name $username
+
+echo "Successfully logged into GitHub. To undo this run osimager --logout"

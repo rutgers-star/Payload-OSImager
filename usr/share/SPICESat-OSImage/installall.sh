@@ -3,22 +3,19 @@
 #installs all required packages from the git hub
 
 #Creation Date: 3/6/2024
-#Last Updated: 3/7/2024
+#Last Updated: 3/13/2024
 #Author: Simon Kowerski :)
 
 #Version: 1.0
 #Assumes already in the correct directory
-#Assumes git is already installed
 
 echo "Beginning package install"
-#make sure to pull completePackage.txt
-#sudo apt-get install < completePackage.txt
-#sudo apt install < completePackage.txt
 
-#git
 test git || sudo apt install git
-#set up stuff
-#pull files
+sudo wget https://github.com/rutgers-star/Payload-OSImager/blob/main/usr/share/SPICESat-OSImage/installed-packages
+sudo wget https://github.com/rutgers-star/Payload-OSImager/blob/main/usr/share/SPICESat-OSImage/repo-keys
+
+echo "Pulled package lists"
 
 
 sudo apt-get install dselect

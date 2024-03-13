@@ -32,6 +32,7 @@ osimager [option] [other]
 
 --add [package]		adds a new package to this operating system AND the remote list of packages
 				[package] will be installed using sudo apt install [package]
+--remove [package] 	removes a package from this operating system and the remote list of packages
 
 --pull 			pulls Pyhton modules from the GitHub and stores them in ~/SPICESat
 --push [commit] 	pushes Python modules from ~/SPICESat into GitHub with commit message [commit] 
@@ -39,6 +40,7 @@ osimager [option] [other]
 
 --login			prompts user to enter GitHub login credentials and updates the GLOBAL data on the computer
 				git credentials must have access to the S.T.A.R. organization
+--logout		removes user's GitHub credentials
 "
 
 if test $# = 0; then
@@ -52,16 +54,16 @@ case $1 in
   --u*) ./installall.sh || exit 1; exit;;
 
   --add*) ./add.sh $2 || exit 1; exit;;
+  --remove*) ./remove.sh $2 || exit 1; exit;;
   
   --pull*) ./pull.sh || exit 1; exit;;
   --push*) ./push.sh $2 || exit 1; exit;;
 
 
   --login*) ./login.sh || exit 1; exit;;
+  --logout*) ./logout.sh || exit 1; exit;;
 
   -?*) echo "$1: unknown command; try $0 --h for help"
 esac
-
-#add error checking for #2 stuff
 
 cd $dir
