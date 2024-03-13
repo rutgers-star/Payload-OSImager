@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#Author Simon Kowerski :)
+
+#dir=$PWD
+#cd /usr/share/SPICESat-OSImage
+
+#osimager --u
+#./installall.sh
+
+#osimager --pull
+#./pull.sh
+
+echo " "
+echo "SPICESat-OSImage Package Insatlled"
+echo "When prompted to sign into git, use an account with access to the S.T.A.R. organization."
+echo "osimager --u to install packages"
+echo "osimager --pull to pull Python modules"
+echo "osimager --b to build libcamera packages"
+echo "osimager --h for help"
+echo " "
+#cd $dir

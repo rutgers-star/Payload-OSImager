@@ -1,0 +1,7 @@
+Package: SPICESat-OSImage
+Version: 1.0.0
+Architecture: all
+Maintainer: Simon Kowerski
+Description: A package which allows OSInstalls of the Rutgers S.T.A.R. SPICESat payload computer to be easily duplicated.
+ Installs all packages and allows you to easily update them in accordance to the project's GitHub page
+ Requires GitHub authentication information to be performed during install.
