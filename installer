@@ -11,4 +11,3 @@
 wget https://github.com/rutgers-star/Payload-OSImager/raw/main/SPICESat-OSImage.deb
 sudo apt install $PWD/SPICESat-OSImage.deb
 rm $PWD/SPICESat-OSImage.deb
-rm $PWD/installer
