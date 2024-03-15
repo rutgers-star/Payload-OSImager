@@ -103,7 +103,7 @@ sudo apt remove spicesat-osimage
 
 [Tuning](https://datasheets.raspberrypi.com/camera/raspberry-pi-camera-guide.pdf)
 
-#### Commands:
+#### Commands
 
 ```bash
 libcamera-vid -o test.h264 --width 1920 --height 1080
@@ -112,7 +112,7 @@ libcamera-vid -t 10000  --width 640 --height 480 --sharpness 1.5 --exposure long
 libcamera-vid -t 10000  --nopreview --width 640 --height 480 --sharpness 1.5 --exposure long --framerate 5 --codec mjpeg -o test.mjpeg
 ```
 
-#### Python :
+#### Python
 
 ```python
 import os os.system("ls -l")
