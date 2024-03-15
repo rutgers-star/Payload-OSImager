@@ -38,7 +38,7 @@ osimager [option] [other]
 				        git credentials must have access to the S.T.A.R. organization
 --logout		    	removes user's GitHub credentials
 
---update		    	updates this package to the latest version
+--version-upgrade		updates this package to the latest version
 ```
 
 There are a set of options that you can make use of to help with the managment of your operating system. Executing `osimager` or `osimager --h` will display a help message which provides a description of all the available functionallity included. 
@@ -80,7 +80,7 @@ All push requests made must be done so with an account linked to the S.T.A.R. Gi
 
 ### Updating the osimager package
 ```bash
-osimager --update
+osimager --version-upgrade
 ```
 
 This command will update the osimager package to the latest version. Makes use of the debian file found in this GitHub.
