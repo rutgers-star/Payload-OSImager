@@ -1,7 +1,5 @@
 
-# SPICESat Payload OSImager
-
-![Contributors](https://img.shields.io/github/contributors/rutgers-star/Payload-OSImager) ![Last Commit](https://img.shields.io/github/last-commit/rutgers-star/Payload-OSImager) ![Stars](https://img.shields.io/github/stars/rutgers-star/Payload-OSImager) 
+# SPICESat Payload OSImager ![Last Commit](https://img.shields.io/github/last-commit/rutgers-star/Payload-OSImager) ![Contributors](https://img.shields.io/github/contributors/rutgers-star/Payload-OSImager) ![Stars](https://img.shields.io/github/stars/rutgers-star/Payload-OSImager) 
 
 
 
@@ -20,15 +18,33 @@ The installer will output 'SPICESat-OSImage Package Installed' and a set of comm
 ## Usage
 Once installed, you can access the imager from the terminal as you would any other package
 
-```bash
+```text
 osimager [option] [other]
+
+--h 			    display this message
+--i 			    creates an image of this operating system and pushes it to GitHub **CANNOT BE UNDONE**
+--u			        installs and upgrades all packages in the remote list of packages
+--b			        installs all dependencies for and builds the libcamera library *should only be done once*
+
+--add [package]		adds a new package to this operating system AND the remote list of packages
+				        [package] will be installed using sudo apt install [package]
+--remove [package] 	removes a package from this operating system and the remote list of packages
+
+--pull 			    pulls Pyhton modules from the GitHub and stores them in ~/SPICESat
+--push [commit] 	pushes Python modules from ~/SPICESat into GitHub with commit message [commit] 
+				        [commit] must be in quotation marks 
+
+--login			    prompts user to enter GitHub login credentials and updates the GLOBAL data on the computer
+				        git credentials must have access to the S.T.A.R. organization
+--logout		    removes user's GitHub credentials
+
+--update            updates this package to the latest version
 ```
 
 There are a set of options that you can make use of to help with the managment of your operating system. Executing `osimager` or `osimager --h` will display a help message which provides a description of all the available functionallity included. 
 
-***
-
-Recommended right after the package is added to the system, it is recommended to run the following commands:
+### "Cloning" the OS
+Right after the package is added to the system, it is recommended to run the following commands:
 
 ```bash
 osimager --u
@@ -41,7 +57,9 @@ osimager --pull
 
 `osimager --b` will install and compile all of the necessary components of the LibCamera package. It is recommended that building the libcamera libraries,  as errors may occur if some of the dependencies are established twice. This is not a project breaking issue in any way, however can be mildly inconvenient at times.  
 
-***
+The above commands can be run at any time to keep your personal image of the OS up to date.
+
+### Keeping external images up to date
 
 Once this is done, the system is set up in what should be a near copy of the original system. The rest of the available commands are as follows:
 
@@ -59,6 +77,22 @@ osimager --logout
 `osimager --push "Commit Message"` does exactly what it says it does. It takes all the code stored in ~/SPICESat and pushes it to the [S.T.A.R. Payload Software GitHub](https://github.com/rutgers-star/PayloadSoftware). Make sure to include a commit message (in quotation marks) to go along with the push request. 
 
 All push requests made must be done so with an account linked to the S.T.A.R. GitHub Organization. This package prompts for login credentials the first time they are needed and not provided. Alternatively, you can run `osimager --login` to provide your credentials to the system. `osimager --logout` removes these credentials and allows you to provide new ones.
+
+### Updating the osimager package
+```bash
+osimager --update
+```
+
+This command will update the osimager package to the latest version. Makes use of the debian file found in this GitHub.
+
+## Uninstalling the package
+
+This package is installed using standard package managers. Executing the following command in the terminal will remove the package in its entirety from the system
+
+```bash
+sudo apt remove spicesat-osimage
+```
+
 ## Libcamera Doccumentation
 
 [PiCamera2 Docs](https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf)
