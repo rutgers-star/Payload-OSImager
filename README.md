@@ -21,24 +21,24 @@ Once installed, you can access the imager from the terminal as you would any oth
 ```text
 osimager [option] [other]
 
---h 			    display this message
---i 			    creates an image of this operating system and pushes it to GitHub **CANNOT BE UNDONE**
+--h 			    	display this message
+--i 			    	creates an image of this operating system and pushes it to GitHub **CANNOT BE UNDONE**
 --u			        installs and upgrades all packages in the remote list of packages
 --b			        installs all dependencies for and builds the libcamera library *should only be done once*
 
---add [package]		adds a new package to this operating system AND the remote list of packages
+--add [package]			adds a new package to this operating system AND the remote list of packages
 				        [package] will be installed using sudo apt install [package]
---remove [package] 	removes a package from this operating system and the remote list of packages
+--remove [package] 		removes a package from this operating system and the remote list of packages
 
---pull 			    pulls Pyhton modules from the GitHub and stores them in ~/SPICESat
---push [commit] 	pushes Python modules from ~/SPICESat into GitHub with commit message [commit] 
+--pull 			    	pulls Pyhton modules from the GitHub and stores them in ~/SPICESat
+--push [commit] 		pushes Python modules from ~/SPICESat into GitHub with commit message [commit] 
 				        [commit] must be in quotation marks 
 
---login			    prompts user to enter GitHub login credentials and updates the GLOBAL data on the computer
+--login			    	prompts user to enter GitHub login credentials and updates the GLOBAL data on the computer
 				        git credentials must have access to the S.T.A.R. organization
---logout		    removes user's GitHub credentials
+--logout		    	removes user's GitHub credentials
 
---update            updates this package to the latest version
+--update		    	updates this package to the latest version
 ```
 
 There are a set of options that you can make use of to help with the managment of your operating system. Executing `osimager` or `osimager --h` will display a help message which provides a description of all the available functionallity included. 
