@@ -1,5 +1,5 @@
 
-# SPICESat Payload OSImager ![Last Commit](https://img.shields.io/github/last-commit/rutgers-star/Payload-OSImager) ![Contributors](https://img.shields.io/github/contributors/rutgers-star/Payload-OSImager) ![Stars](https://img.shields.io/github/stars/rutgers-star/Payload-OSImager) 
+# SPICESat Payload OSImager ![Last Commit](https://img.shields.io/github/last-commit/rutgers-star/Payload-OSImager) ![Contributors](https://img.shields.io/github/contributors/rutgers-star/Payload-OSImager) 
 
 
 
