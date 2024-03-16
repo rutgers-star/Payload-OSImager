@@ -9,7 +9,7 @@
 #Version: 1.1.0
 #Assumes already in the correct directory
 
-
+sudo touch python-requirements
 
 read -p "Overwriting existing OSImage with image of this current operating system. Type [y] to continue? " input
 if [ "$input" == "y" ]; then
@@ -21,7 +21,7 @@ if [ "$input" == "y" ]; then
 
 	dpkg --get-selections > installed-packages
 	apt-key exportall > repo-keys
-	sudo python3 pip freeze > python-requirements
+	sudo python3 -m pip freeze > python-requirements
 	
 	sudo git clone https://github.com/rutgers-star/Payload-OSImager.git
 	sudo find Payload-OSImager -type d -exec chmod 777 {} \;
