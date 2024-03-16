@@ -3,10 +3,10 @@
 #File to run the OSImager for the payload computers of the Rutgers S.T.A.R SPICESat project
 
 #Creation Date: 3/6/2024
-#Last Update: 3/6/2024
+#Last Update: 3/16/2024
 #Author Simon Kowerski :)
 
-#Version 1.0
+#Version 1.1.0
 
 
 dir=$PWD
@@ -32,7 +32,10 @@ osimager [option] [other]
 
 --add [package]		adds a new package to this operating system AND the remote list of packages
 				[package] will be installed using sudo apt install [package]
+--add pip [package]	functions the same as above but used to install a python package using pip not apt
+
 --remove [package] 	removes a package from this operating system and the remote list of packages
+--remove pip [package]	functions the same as above but user to remove a python package using pip not apt
 
 --pull 			pulls Pyhton modules from the GitHub and stores them in ~/SPICESat
 --push [commit] 	pushes Python modules from ~/SPICESat into GitHub with commit message [commit] 
@@ -56,8 +59,8 @@ case $1 in
   --u*) ./installall.sh || exit 1; exit;;
   --b*) ./cambuild.sh || exit 1; exit;;
 
-  --add*) ./add.sh $2 || exit 1; exit;;
-  --remove*) ./remove.sh $2 || exit 1; exit;;
+  --add*) ./add.sh $@ || exit 1; exit;;
+  --remove*) ./remove.sh $@ || exit 1; exit;;
   
   --pull*) ./pull.sh || exit 1; exit;;
   --push*) ./push.sh $2 || exit 1; exit;;
