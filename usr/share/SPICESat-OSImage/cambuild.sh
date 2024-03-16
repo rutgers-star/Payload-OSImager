@@ -47,3 +47,13 @@ meson setup build -Denable_libav=true -Denable_drm=true -Denable_egl=false -Dena
 meson compile -C build
 sudo meson install -C build
 sudo ldconfig
+
+#move folders int ~/libcamera-build
+cd ~
+mkdir libcamera-build
+cp -r libcamera libcamera-build/
+cp -r libcamera-apps libcamera-build/
+cp -r libepoxy libcamera-build/
+sudo rm -r libcamera
+sudo rm -r libcamera-apps
+sudo rm -r libepoxy
