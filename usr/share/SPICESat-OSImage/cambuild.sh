@@ -3,10 +3,10 @@
 #Builds libcam stuff
 
 #Creation Date: 3/11/2024
-#Last Updated: 3/11/2024
+#Last Updated: 3/16/2024
 #Author: Simon Kowerski :)
 
-#Version: 1.0
+#Version: 1.0.1
 #Assumes already in the correct directory
 
 
