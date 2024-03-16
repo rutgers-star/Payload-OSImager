@@ -12,6 +12,9 @@
 echo "Beginning package install"
 
 test git || sudo apt install git
+sudo rm installed-packages
+sudo rm repo-keys
+sudo rm python-requirements
 sudo wget https://github.com/rutgers-star/Payload-OSImager/blob/main/usr/share/SPICESat-OSImage/installed-packages
 sudo wget https://github.com/rutgers-star/Payload-OSImager/blob/main/usr/share/SPICESat-OSImage/repo-keys
 sudo wget https://github.com/rutgers-star/Payload-OSImager/blob/main/usr/share/SPICESat-OSImage/python-requirements
