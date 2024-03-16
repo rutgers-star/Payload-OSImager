@@ -1,5 +1,6 @@
 Package: SPICESat-OSImage
-Version: 1.0.0
+Version: 1.0.1
+Installed-Size: 1.2 MB
 Architecture: all
 Maintainer: Simon Kowerski
 Description: A package which allows OSInstalls of the Rutgers S.T.A.R. SPICESat payload computer to be easily duplicated.

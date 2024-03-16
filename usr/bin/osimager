@@ -41,6 +41,8 @@ osimager [option] [other]
 --login			prompts user to enter GitHub login credentials and updates the GLOBAL data on the computer
 				git credentials must have access to the S.T.A.R. organization
 --logout		removes user's GitHub credentials
+
+--v			updates this (osimager) package to the latest version
 "
 
 if test $# = 0; then
@@ -63,6 +65,8 @@ case $1 in
 
   --login*) ./login.sh || exit 1; exit;;
   --logout*) ./logout.sh || exit 1; exit;;
+
+  --v*) ./update.sh || exit 1; exit;;
 
   -?*) echo "$1: unknown command; try $0 --h for help"
 esac
