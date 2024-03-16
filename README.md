@@ -20,25 +20,27 @@ Once installed, you can access the imager from the terminal as you would any oth
 
 ```text
 osimager [option] [other]
+--h 			display this message
+--i 			creates an image of this operating system and pushes it to GitHub **CANNOT BE UNDONE**
+--u			installs and upgrades all packages in the remote list of packages
+--b			installs all dependencies for and builds the libcamera library *should only be done once*
 
---h 			    	display this message
---i 			    	creates an image of this operating system and pushes it to GitHub **CANNOT BE UNDONE**
---u			        installs and upgrades all packages in the remote list of packages
---b			        installs all dependencies for and builds the libcamera library *should only be done once*
+--add [package]		adds a new package to this operating system AND the remote list of packages
+				[package] will be installed using sudo apt install [package]
+--add pip [package]	functions the same as above but used to install a python package using pip not apt
 
---add [package]			adds a new package to this operating system AND the remote list of packages
-				        [package] will be installed using sudo apt install [package]
---remove [package] 		removes a package from this operating system and the remote list of packages
+--remove [package] 	removes a package from this operating system and the remote list of packages
+--remove pip [package]	functions the same as above but user to remove a python package using pip not apt
 
---pull 			    	pulls Pyhton modules from the GitHub and stores them in ~/SPICESat
---push [commit] 		pushes Python modules from ~/SPICESat into GitHub with commit message [commit] 
-				        [commit] must be in quotation marks 
+--pull 			pulls Pyhton modules from the GitHub and stores them in ~/SPICESat
+--push [commit] 	pushes Python modules from ~/SPICESat into GitHub with commit message [commit] 
+				[commit] must be in quotation marks 
 
---login			    	prompts user to enter GitHub login credentials and updates the GLOBAL data on the computer
-				        git credentials must have access to the S.T.A.R. organization
---logout		    	removes user's GitHub credentials
+--login			prompts user to enter GitHub login credentials and updates the GLOBAL data on the computer
+				git credentials must have access to the S.T.A.R. organization
+--logout		removes user's GitHub credentials
 
---v				updates this package to the latest version
+--v			updates this (osimager) package to the latest version
 ```
 
 There are a set of options that you can make use of to help with the managment of your operating system. Executing `osimager` or `osimager --h` will display a help message which provides a description of all the available functionallity included. 
@@ -67,12 +69,14 @@ Once this is done, the system is set up in what should be a near copy of the ori
 osimager --i
 osimager --push "Commit Message"
 osimager --add
+osimager --add pip
 osimager --remove
+osimager --remove pip
 osimager --login
 osimager --logout
 ```
 
-`osimager --add` and `osimager --remove` are used to automaticall install and uninstall new packages in the system. They use the default **apt-get** package manager to achieve this. Upon the completion of the install or delete they automatically update this GitHub with the updated list of packages on your system. These are here for convenience. If you install packages using any other package manager, they can be included in the master list by running `osimager --i` which creates and pushes the image of your os to this GitHub. Keep in mind, running this command cannot be undone. Contact the maintainer if you accidentally mess up the list, as a backup of this list is maintained in a private repository. 
+`osimager --add` and `osimager --remove` are used to automaticall install and uninstall new packages in the system. They use the default **apt-get** package manager to achieve this. Upon the completion of the install or delete they automatically update this GitHub with the updated list of packages on your system. The pip option included for each of these commands allows you to install python packages in the same manner using pip instead of apt-get. All of these are here for convenience. If you install packages using any other package manager, they can be included in the master list by running `osimager --i` which creates and pushes the image of your os to this GitHub. This master list image includes all packages installed on the Ubuntu operating system as well as all those installed on pip. Keep in mind, running the `osimager --i` command cannot be undone. Contact the maintainer if you accidentally mess up the list, as a backup of this list is maintained in a private repository. 
 
 `osimager --push "Commit Message"` does exactly what it says it does. It takes all the code stored in ~/SPICESat and pushes it to the [S.T.A.R. Payload Software GitHub](https://github.com/rutgers-star/PayloadSoftware). Make sure to include a commit message (in quotation marks) to go along with the push request. 
 
