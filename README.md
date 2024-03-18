@@ -87,7 +87,7 @@ All push requests made must be done so with an account linked to the S.T.A.R. Gi
 osimager --v
 ```
 
-This command will update the osimager package to the latest version. Makes use of the debian file found in this GitHub.
+This command will update the osimager package to the latest version. Makes use of the debian file found in this GitHub. There may be commits to the GitHub that are not reflected in these updates, as the debian file has not yet been updated. Any commits made after the [latest release](https://github.com/rutgers-star/Payload-OSImager/releases/latest) will not be reflected in these updates. When a new version is released, the .deb file will be updated allowing for distributions of the software to be updated as well.
 
 ## Uninstalling the package
 
