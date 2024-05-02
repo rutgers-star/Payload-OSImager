@@ -89,7 +89,6 @@ pyRFC3339==1.1
 pyserial==3.5
 python-dateutil==2.8.1
 python-debian==0.1.43+ubuntu1.1
-python-prctl==1.8.1
 pytz==2022.1
 pyxdg==0.27
 PyYAML==5.4.1
@@ -213,7 +212,6 @@ types-waitress==0.1
 types-Werkzeug==1.0
 types-xxhash==2.0
 typing-extensions==3.10.0.2
-ubuntu-advantage-tools==8001
 ubuntu-drivers-common==0.0.0
 ufw==0.36.1
 unattended-upgrades==0.1
