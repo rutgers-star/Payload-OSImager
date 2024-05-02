@@ -1,3 +1,5 @@
+# As of 5/1/2024 errors have been found and this package is not safe to run on established os installs. DO NOT ATTEMPT TO USE IT. If you have a fresh install of Ubuntu it does work, but otherwise it is not worth risking the loss of your data. 
+
 
 # SPICESat Payload OSImager ![Last Commit](https://img.shields.io/github/last-commit/rutgers-star/Payload-OSImager) ![Contributors](https://img.shields.io/github/contributors/rutgers-star/Payload-OSImager) ![Release Version](https://img.shields.io/github/v/release/rutgers-star/Payload-OSImager)
 
