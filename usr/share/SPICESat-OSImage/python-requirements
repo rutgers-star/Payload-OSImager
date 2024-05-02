@@ -87,7 +87,6 @@ PyQt5==5.15.6
 PyQt5-sip==12.13.0
 pyRFC3339==1.1
 pyserial==3.5
-python-apt==2.4.0+ubuntu2
 python-dateutil==2.8.1
 python-debian==0.1.43+ubuntu1.1
 python-prctl==1.8.1
